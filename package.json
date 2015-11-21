@@ -1,7 +1,7 @@
 {
   "name": "request-node",
   "repository": {
-    "type": "git",
+    "type": "git"
   },
   "description": "Learn Mocah-Request-Node ",
   "devDependencies": {
