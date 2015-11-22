@@ -4,10 +4,11 @@ var expect = require("chai").expect;
 var hi = require('../src/hi.js');
 
 it("should have sso session" , function(done){
-  hi.requestFunction(function(err) {
+  hi.requestFunction(function(err, status) {
                 if(err) {
-                    return done(err);
+                    return done(err)
                 }
-                done();
+                assert(status === 200)
+                done()
             });
 });

@@ -1,11 +1,12 @@
 var request = require('request');
 var C = {};
 
-C.requestFunction = function(){
+C.requestFunction = function(callback){
 	return request('http://www.google.com', function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-    console.log(response.statusCode) 
+  if (error) {
+     callback(error)
   }
+ callback(undefined,response.statusCode)
 })
 }
 module.exports = C;
