@@ -10,5 +10,5 @@ it("should have sso session" , function(done){
                 }
                 assert(status === 200)
                 done()
-            });
-});
+            })
+})
